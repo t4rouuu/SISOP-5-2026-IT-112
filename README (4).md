@@ -397,6 +397,12 @@ cd ..
 rm -rf "$ROOTFS"
 echo "multi.gz berhasil dibuat"
 ```
+<img width="955" height="556" alt="sisop5 4 6" src="https://github.com/user-attachments/assets/4fc5580f-0756-404d-bba6-8d452e9b00fb" />
+<img width="967" height="668" alt="sisop5 4 5" src="https://github.com/user-attachments/assets/4a18b2f0-8ab1-45f7-b3d1-92f504f3003f" />
+<img width="947" height="696" alt="sisop5 4 4" src="https://github.com/user-attachments/assets/e724c660-9470-43cc-a170-4dfe656c898c" />
+<img width="1368" height="503" alt="sisop5 4 3" src="https://github.com/user-attachments/assets/097240ef-6a5e-428a-a225-66176af0b36b" />
+<img width="1371" height="452" alt="sisop5 4 2" src="https://github.com/user-attachments/assets/8440713b-3abd-4e57-a757-29c300d6c78e" />
+<img width="950" height="188" alt="sisop5 4 1" src="https://github.com/user-attachments/assets/abee3ba7-818e-45c0-b08c-ecc0a81d1ca8" />
 
 ---
 
@@ -515,7 +521,8 @@ echo "nameserver 8.8.8.8" > /etc/resolv.conf
 
 **Bukti:**
 
-> [Screenshot ping 8.8.8.8 dan wget example.com]
+> <img width="1363" height="750" alt="sisop5 8 1" src="https://github.com/user-attachments/assets/aa36e466-eab5-4de1-9309-636a448d096f" />
+
 
 ---
 
@@ -531,7 +538,10 @@ party update
 
 **Bukti:**
 
-> [Screenshot party install / party update]
+> <img width="952" height="750" alt="sisop5 9 1" src="https://github.com/user-attachments/assets/70695565-1139-42cd-91db-494cd72fd02f" />
+<img width="436" height="107" alt="sisop5 9 3" src="https://github.com/user-attachments/assets/cbb345e3-1b7f-49ec-aa6e-a878dc413836" />
+
+
 
 ---
 
@@ -560,4 +570,5 @@ Hello from FUSE!
 
 **Bukti:**
 
-> [Screenshot hello_fuse berjalan dan output cat /tmp/mnt/hello]
+> <img width="1363" height="750" alt="sisop5 10" src="https://github.com/user-attachments/assets/a41815b6-70e1-43b6-9d53-84bf0c2c109b" />
+
