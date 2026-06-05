@@ -506,15 +506,18 @@ echo "File build telah dihapus"
 
 ## 8. Internet Access
 
-Di host, kernel dikompilasi ulang dengan menambahkan `CONFIG_E1000=y` agar QEMU dapat mengenali network interface eth0, dan pada `qemu.sh` ditambahkan flag `-nic user,model=e1000` pada mode `--multi`.
+Di host, kernel dikompilasi ulang dengan menambahkan `CONFIG_E1000=y` dan pada `qemu.sh` ditambahkan flag `-nic user,model=e1000` pada mode `--multi`. Di `multi.sh`, `etc/init.d/rcS` dikonfigurasi untuk menjalankan setup network otomatis saat boot.
 
-Di dalam QEMU, `etc/init.d/rcS` pada `multi.sh` secara otomatis mengkonfigurasi network saat boot:
+Di dalam QEMU, network langsung aktif tanpa konfigurasi manual:
 
 ```sh
-ifconfig eth0 10.0.2.15 netmask 255.255.255.0
-route add default gw 10.0.2.2
-echo "nameserver 8.8.8.8" > /etc/resolv.conf
+ping 8.8.8.8
+wget example.com
 ```
+
+**Bukti:**
+
+> [Screenshot ping 8.8.8.8 dan wget example.com]
 **Bukti:**
 
 > <img width="1363" height="750" alt="sisop5 8 1" src="https://github.com/user-attachments/assets/aa36e466-eab5-4de1-9309-636a448d096f" />
