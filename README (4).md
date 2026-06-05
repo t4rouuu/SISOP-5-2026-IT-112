@@ -506,19 +506,15 @@ echo "File build telah dihapus"
 
 ## 8. Internet Access
 
-Untuk mengaktifkan akses internet di dalam OS, dibutuhkan dua hal:
+Di host, kernel dikompilasi ulang dengan menambahkan `CONFIG_E1000=y` agar QEMU dapat mengenali network interface eth0, dan pada `qemu.sh` ditambahkan flag `-nic user,model=e1000` pada mode `--multi`.
 
-**Kernel**: dikompilasi dengan driver `CONFIG_E1000=y` agar QEMU dapat mengenali network interface eth0.
+Di dalam QEMU, `etc/init.d/rcS` pada `multi.sh` secara otomatis mengkonfigurasi network saat boot:
 
-**QEMU**: ditambahkan flag `-nic user,model=e1000` pada mode `--multi`.
-
-**Init script** (`etc/init.d/rcS`): secara otomatis mengkonfigurasi network saat boot:
 ```sh
 ifconfig eth0 10.0.2.15 netmask 255.255.255.0
 route add default gw 10.0.2.2
 echo "nameserver 8.8.8.8" > /etc/resolv.conf
 ```
-
 **Bukti:**
 
 > <img width="1363" height="750" alt="sisop5 8 1" src="https://github.com/user-attachments/assets/aa36e466-eab5-4de1-9309-636a448d096f" />
